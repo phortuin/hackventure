@@ -1,0 +1,50 @@
+input,
+select,
+textarea,
+button,
+body {
+	font-family: @font;
+	line-height: @line-height;
+	font-size: @font-size-normal;
+	color: @black;
+	font-feature-settings: "kern", "liga";
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: @blue;
+}
+
+a {
+	color: @blue;
+	text-decoration: none;
+	.underline(@blue);
+
+	&.inverted {
+		.underline(@white);
+	}
+}
+
+.inverted {
+	color: @white;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+	margin: 0 0 @margin-default;
+}
+
+h1 {
+	font-size: 28/16em;
+}
+
+h2 {
+	font-size: 21/16em;
+}
+
+p {
+	margin: 0 0 @margin-default;
+}

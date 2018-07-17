@@ -1,0 +1,25 @@
+# vendor packages
+node_modules
+
+# project meta
+.idea
+.settings
+*.sublime-project
+*.sublime-workspace
+.vscode
+
+# npm cruft
+npm-debug.log
+
+# cupertino cruft
+.DS_Store
+
+# dist + cache
+static
+cache
+
+# environment vars
+.env
+
+# commercial fonts
+src/assets/fonts

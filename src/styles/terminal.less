@@ -1,0 +1,41 @@
+.terminal {
+	background: @black;
+	outline: 1000em solid @black;
+	color: @white;
+	font-family: @font-monospace;
+	width: @width-default;
+
+	input[type=text] {
+		color: @white;
+		background: none;
+		border: 0;
+		padding: 0;
+		outline: none;
+		font-family: @font-monospace;
+	}
+
+	pre {
+		font-family: @font-monospace;
+		font-size: @font-size-normal;
+		white-space: pre-wrap;
+	}
+
+	.terminal__path {
+		color: @yellow-bright;
+	}
+
+	p {
+		margin: 0;
+		word-break: break-all;
+	}
+
+	.terminal__command {
+		span {
+			color: @pink;
+		}
+	}
+
+	.terminal__output {
+		margin-bottom: @margin-default;
+	}
+}

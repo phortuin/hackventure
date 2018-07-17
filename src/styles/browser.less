@@ -1,0 +1,81 @@
+.browser {
+	box-shadow: @box-shadow;
+	border-radius: @border-radius-wide;
+	background: @white;
+
+	.browser__bar {
+		display: flex;
+		align-items: center;
+		padding: @margin-half;
+		background: @grey-light;
+		border-radius: @border-radius-wide;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.browser__stoplights {
+		margin-right: @margin-half;
+		user-select: none;
+
+		span {
+			margin-right: @margin-default / 4;
+		}
+
+		.red { color: @red; }
+		.yellow { color: @yellow; }
+		.green { color: @green; }
+	}
+
+	.browser__title {
+		font-size: 14/16em;
+		vertical-align: bottom;
+	}
+
+	.browser__canvas {
+		min-height: 40vh;
+		display: flex;
+		padding-left: @margin-default * 2;
+		align-items: center;
+	}
+
+	ul, li {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+		margin-bottom: @margin-default;
+	}
+
+	label {
+		display: block;
+		margin-bottom: @margin-half;
+		color: @grey;
+	}
+
+	input[type=text], input[type=password] {
+		background: @white;
+		border: 0;
+		border-bottom: 2px solid @grey;
+		width: 15rem;
+		padding: 0 0;
+
+		&:focus {
+			border-color: @blue;
+			outline: none;
+		}
+	}
+
+	h1 {
+		color: @blue;
+	}
+
+	.form__user {
+		margin-bottom: @margin-default * 2;
+
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+}

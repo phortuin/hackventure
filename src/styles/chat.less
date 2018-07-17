@@ -1,0 +1,64 @@
+.chat {
+	background: @grey-light;
+	outline: 1000em solid @grey-light;
+
+	.balloon {
+		display: block;
+		clear: both;
+		margin-bottom: @margin-default / 4;
+		padding: 0.75rem @margin-default;
+		box-shadow: @box-shadow;
+		max-width: 70%;
+	}
+
+	.balloon--theirs {
+		float: left;
+		background: @white;
+		border-top-right-radius: 0.75em;
+		border-bottom-right-radius: 0.75em;
+		border-bottom-left-radius: 0.75em;
+		animation: 100ms fadein-theirs ease-out;
+
+		&:first-of-type {
+			border-top-left-radius: 0.75em;
+		}
+
+		& + .balloon--mine {
+			margin-top: 0.75rem;
+		}
+	}
+
+	.balloon--mine {
+		float: right;
+		background: @blue;
+		border-top-left-radius: 0.75em;
+		border-bottom-left-radius: 0.75em;
+		border-bottom-right-radius: 0.75em;
+		color: @white;
+		-webkit-font-smoothing: antialiased;
+		animation: 100ms fadein-mine ease-out;
+
+		& + .balloon--theirs {
+			margin-top: 0.75rem;
+		}
+	}
+
+	.balloon__time {
+		float: right;
+		font-size: 12/16em;
+		color: @grey;
+		margin-top: 5/16rem;
+		margin-left: @margin-default;
+	}
+
+	@keyframes fadein-theirs {
+		0% { opacity: 0; transform: translateX(-20px); }
+		100% { opacity: 1; transform: translateX(0); }
+	}
+
+	@keyframes fadein-mine {
+		0% { opacity: 0; transform: translateX(20px); }
+		100% { opacity: 1; transform: translateX(0); }
+	}
+
+}

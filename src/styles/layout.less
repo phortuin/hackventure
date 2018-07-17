@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+
+[role=main] {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	width: @width-default;
+}
+
+dl {
+	margin: 0 0 @margin-default;
+
+	dd, dt {
+		display: inline;
+	}
+
+	dt {
+		font-weight: bold;
+		font-size: 15/16em;
+		margin-right: 0.5em;
+
+		&:after {
+			content: ":";
+		}
+	}
+
+	dd {
+		margin: 0;
+
+		&:after {
+			content: "";
+			display: block;
+		}
+	}
+}
+
+.button, [role=button], button {
+	border: none;
+	background: @blue;
+	color: @white;
+	font-size: 14/16em;
+	padding: @margin-half @margin-default;
+	margin-top: @margin-default;
+	box-shadow: @box-shadow;
+	text-transform: uppercase;
+	outline: none;
+}
